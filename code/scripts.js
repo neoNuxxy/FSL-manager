@@ -27,21 +27,21 @@ var admin = false
 
 function login()
 {
-    let admin = "teacher"
-    let user = "student"
+    let nameAdmin = "teacher"
+    let nameUser = "student"
 
     let passAdmin = "admin"
     let passUser = "user"
 
     try
     {
-        if(document.getElementById("txtInputUser").value == admin && document.getElementById("txtInputPass").value == passAdmin)
+        if(document.getElementById("txtInputUser").value == nameAdmin && document.getElementById("txtInputPass").value == passAdmin)
         {
             admin = true
             alert("Welcome teacher")
         }
 
-        else if(document.getElementById("txtInputUser").value == user && document.getElementById("txtInputPass").value == passUser)
+        else if(document.getElementById("txtInputUser").value == nameUser && document.getElementById("txtInputPass").value == passUser)
         {
             admin = false
             alert("Welcome student")
