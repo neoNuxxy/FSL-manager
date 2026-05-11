@@ -23,14 +23,21 @@ Il sistema dovrà archiviare i dati per anno scolastico mantenendo lo storico co
 in vista dell'integrazione con una base di dati relazionale al quinto anno.
 */
 
-<html>
-    <head>
-        <title>
-            This is a test
-        </title>
-    </head>
+function login()
+{
+    let admin = "teacher"
+    let user = "student"
 
-    <body>
-        test
-    </body>
-</html>
+    let passAdmin = "admin"
+    let passUser = "user"
+}
+
+function companiesInfo()
+{
+    let sector = ""
+    let location = ""
+    let maxStudents = 0
+    let referent = ""
+    let history = ""
+}
+
