@@ -21,11 +21,13 @@ alerting automatico per studenti in ritardo rispetto al calendario previsto.
 Il sistema dovrà archiviare i dati per anno scolastico mantenendo lo storico consultabile negli anni successivi,
 in vista dell'integrazione con una base di dati relazionale al quinto anno. !-->
 
-<html>
+<!DOCTYPE html>
     <head>
         <title>
                 FSL Manager
         </title>
+
+        <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/8/85/Smiley.svg">
 
         <script type="text/javascript" src="scripts.js"></script>
     </head>
@@ -33,14 +35,7 @@ in vista dell'integrazione con una base di dati relazionale al quinto anno. !-->
     <body>
         <input id="txtInputUser" type="text">
         <input id="txtInputPass" type="text">
-
         
-        <button id="btnLogin">
-            login
-        </button>
-
-        
-        
-
+        <button id="btnLogin" onclick="login()">Login</button>
     </body>
 </html>
