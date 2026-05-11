@@ -23,6 +23,8 @@ Il sistema dovrà archiviare i dati per anno scolastico mantenendo lo storico co
 in vista dell'integrazione con una base di dati relazionale al quinto anno.
 */
 
+var admin = false
+
 function login()
 {
     let admin = "teacher"
@@ -30,7 +32,39 @@ function login()
 
     let passAdmin = "admin"
     let passUser = "user"
+
+    if(ducument.getElementById("inputUser") == admin)
+        return true
+
+    if(ducument.getElementById("inputPassword") == admin)
+        return true
+
+    do
+    {
+        try
+        {
+            if(document.getElementById("inputUser") == admin && document.getElementById("inputPassword") == passAdmin)
+            {
+                admin = true
+                break
+            }
+
+            else if(document.getElementById("inputUser") == user && document.getElementById("inputPassword") == passUser)
+            {
+                admin = false
+                break
+            }
+        }
+
+        catch
+        {
+            alert("The username is incorrect!")
+        }
+
+
+    }while(true)
 }
+    
 
 function companiesInfo()
 {
