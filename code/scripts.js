@@ -29,42 +29,33 @@ document.getElementById("btnLogin").onclick = login();
 
 function login()
 {
+    alert("welcome")
+
     let admin = "teacher"
     let user = "student"
 
     let passAdmin = "admin"
     let passUser = "user"
 
-    if(ducument.getElementById("inputUser") == admin)
-        return true
-
-    if(ducument.getElementById("inputPassword") == admin)
-        return true
-
-    do
+    try
     {
-        try
+        if(document.getElementById("txtInputUser").textContent == admin && document.getElementById("txtInputPassword").value == passAdmin.value)
         {
-            if(document.getElementById("txtInputUser") == admin && document.getElementById("txtInputPassword") == passAdmin)
-            {
-                admin = true
-                break
-            }
-
-            else if(document.getElementById("txtInputUser") == user && document.getElementById("txtInputPassword") == passUser)
-            {
-                admin = false
-                break
-            }
+            admin = true
+            break
         }
 
-        catch
+        else if(document.getElementById("txtInputUser").textContent == user && document.getElementById("txtInputPassword").value == passUser.value)
         {
-            alert("The username is incorrect!")
+            admin = false
+            break
         }
+    }
 
-
-    }while(true)
+    catch
+    {
+        alert("The username is incorrect!")
+    }
 }
     
 
