@@ -25,6 +25,8 @@ in vista dell'integrazione con una base di dati relazionale al quinto anno.
 
 var admin = false
 
+document.getElementById("btnLogin").onclick = login();
+
 function login()
 {
     let admin = "teacher"
@@ -43,13 +45,13 @@ function login()
     {
         try
         {
-            if(document.getElementById("inputUser") == admin && document.getElementById("inputPassword") == passAdmin)
+            if(document.getElementById("txtInputUser") == admin && document.getElementById("txtInputPassword") == passAdmin)
             {
                 admin = true
                 break
             }
 
-            else if(document.getElementById("inputUser") == user && document.getElementById("inputPassword") == passUser)
+            else if(document.getElementById("txtInputUser") == user && document.getElementById("txtInputPassword") == passUser)
             {
                 admin = false
                 break
