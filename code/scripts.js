@@ -71,7 +71,7 @@ function courseInfo()
     let achievement = ""
     let skill = ""
     let workingPeriod = ""
-    let hourCountTotal = 150
+    const hourCountTotal = 150
     let hourCount = 0
 }
 
