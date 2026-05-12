@@ -36,7 +36,6 @@ function courseInfo()
         skill = document.getElementById("txtSkill").value
         workingPeriod = document.getElementById("txtWorkingPeriod").value
         hourCount = parseInt(document.getElementById("txtHourCount").value)
-        hourCountTotal = 150
     }
     
     catch
