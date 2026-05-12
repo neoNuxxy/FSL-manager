@@ -1,3 +1,5 @@
+var attempts = 3
+
 function login()
 {
     const nameAdmin = "teacher"
@@ -21,11 +23,21 @@ function login()
         }
 
         else
-            alert("The username or password is invalid!")
+        {
+            attempts--
+            alert("The username or password is invalid!\nAttempts remaining: " + attempts)
+        }
+
+        if(attempts == 0)
+        {
+            alert("Too many failed attempts!")
+            window.location = "https://google.com"
+        }
     }
 
     catch
     {
-        alert("The username or password is invalid!")
+        attempts--
+        alert("The username or password is invalid!\nAttempts remaining: " + attempts)
     }
 } 
