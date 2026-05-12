@@ -55,6 +55,8 @@ function login()
     {
         alert("The username or password is invalid!")
     }
+
+    return admin
 }   
 
 function companiesInfo()
