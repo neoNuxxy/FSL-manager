@@ -55,8 +55,7 @@ function login()
     {
         alert("The username or password is invalid!")
     }
-}
-    
+}   
 
 function companiesInfo()
 {
@@ -66,4 +65,3 @@ function companiesInfo()
     let referent = ""
     let history = ""
 }
-
