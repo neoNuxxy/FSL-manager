@@ -1,4 +1,4 @@
-var admin = false
+var attempts = 3
 
 function login()
 {
@@ -12,24 +12,32 @@ function login()
     {
         if(document.getElementById("txtUser").value == nameAdmin && document.getElementById("txtPass").value == passAdmin)
         {
-            admin = true
             alert("Welcome teacher")
+            window.location = "../html/admin.html"
         }
 
         else if(document.getElementById("txtUser").value == nameUser && document.getElementById("txtPass").value == passUser)
         {
-            admin = false
             alert("Welcome student")
+            window.location = "../html/user.html"
         }
 
         else
-            alert("The username or password is invalid!")
+        {
+            attempts--
+            alert("The username or password is invalid!\nAttempts remaining: " + attempts)
+        }
+
+        if(attempts == 0)
+        {
+            alert("Too many failed attempts!")
+            window.location = "https://google.com"
+        }
     }
 
     catch
     {
-        alert("The username or password is invalid!")
+        attempts--
+        alert("The username or password is invalid!\nAttempts remaining: " + attempts)
     }
-
-    return admin
 } 
