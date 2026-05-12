@@ -19,7 +19,7 @@ function login()
         else if(document.getElementById("txtUser").value == nameUser && document.getElementById("txtPass").value == passUser)
         {
             alert("Welcome student")
-            window.location = "../html/student.html"
+            window.location = "../html/user.html"
         }
 
         else
