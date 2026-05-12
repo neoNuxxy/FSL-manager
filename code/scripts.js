@@ -35,13 +35,13 @@ function login()
 
     try
     {
-        if(document.getElementById("txtInputUser").value == nameAdmin && document.getElementById("txtInputPass").value == passAdmin)
+        if(document.getElementById("txtUser").value == nameAdmin && document.getElementById("txtPass").value == passAdmin)
         {
             admin = true
             alert("Welcome teacher")
         }
 
-        else if(document.getElementById("txtInputUser").value == nameUser && document.getElementById("txtInputPass").value == passUser)
+        else if(document.getElementById("txtUser").value == nameUser && document.getElementById("txtPass").value == passUser)
         {
             admin = false
             alert("Welcome student")
