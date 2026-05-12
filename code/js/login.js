@@ -1,5 +1,3 @@
-var admin = false
-
 function login()
 {
     const nameAdmin = "teacher"
@@ -12,14 +10,14 @@ function login()
     {
         if(document.getElementById("txtUser").value == nameAdmin && document.getElementById("txtPass").value == passAdmin)
         {
-            admin = true
             alert("Welcome teacher")
+            window.location = "../html/admin.html"
         }
 
         else if(document.getElementById("txtUser").value == nameUser && document.getElementById("txtPass").value == passUser)
         {
-            admin = false
             alert("Welcome student")
+            window.location = "../html/student.html"
         }
 
         else
@@ -30,6 +28,4 @@ function login()
     {
         alert("The username or password is invalid!")
     }
-
-    return admin
 } 
