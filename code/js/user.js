@@ -10,3 +10,8 @@ function documentLoad()
     let trainingProject = false
     let finalReport = false
 }
+
+function saveFile()
+{
+    JSON.stringify()
+}
