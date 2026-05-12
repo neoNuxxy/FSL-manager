@@ -27,11 +27,11 @@ var admin = false
 
 function login()
 {
-    let nameAdmin = "teacher"
-    let nameUser = "student"
+    const nameAdmin = "teacher"
+    const nameUser = "student"
 
-    let passAdmin = "admin"
-    let passUser = "user"
+    const passAdmin = "admin"
+    const passUser = "user"
 
     try
     {
