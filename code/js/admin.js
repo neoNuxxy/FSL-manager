@@ -1,19 +1,48 @@
 function companiesInfo()
 {
-    let sector = document.getElementById("txtSector").value
-    let location = document.getElementById("txtLocation").value
-    let maxStudents = parseInt(document.getElementById("txtMaxStudents").value)
-    let referent = document.getElementById("txtReferent").value
-    let history = document.getElementById("txtHistory").value
+    let sector = ""
+    let location = ""
+    let maxStudents = 0
+    let referent = ""
+    let history = ""
+
+    try
+    {
+        sector = document.getElementById("txtSector").value
+        location = document.getElementById("txtLocation").value
+        maxStudents = parseInt(document.getElementById("txtMaxStudents").value)
+        referent = document.getElementById("txtReferent").value
+        history = document.getElementById("txtHistory").value
+    }
+
+    catch
+    {
+        alert("The information inserted is invalid!")
+    }
+    
 }
 
 function courseInfo()
 {
-    let achievement = document.getElementById("txtAchievement").value
-    let skill = document.getElementById("txtSkill").value
-    let workingPeriod = document.getElementById("txtWorkingPeriod").value
-    let hourCount = parseInt(document.getElementById("txtHourCount").value)
+    let achievement = ""
+    let skill = ""
+    let workingPeriod = ""
+    let hourCount = 0
     const hourCountTotal = 150
+
+    try
+    {
+        achievement = document.getElementById("txtAchievement").value
+        skill = document.getElementById("txtSkill").value
+        workingPeriod = document.getElementById("txtWorkingPeriod").value
+        hourCount = parseInt(document.getElementById("txtHourCount").value)
+        hourCountTotal = 150
+    }
+    
+    catch
+    {
+        alert("The information inserted is invalid!")
+    }
 }
 
 function saveFile()
