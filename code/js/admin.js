@@ -19,7 +19,6 @@ function companiesInfo()
     {
         alert("The information inserted is invalid!")
     }
-    
 }
 
 function courseInfo()
