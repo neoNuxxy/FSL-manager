@@ -65,3 +65,25 @@ function companiesInfo()
     let referent = ""
     let history = ""
 }
+
+function courseInfo()
+{
+    let achievement = ""
+    let skill = ""
+    let workingPeriod = ""
+    let hourCountTotal = 150
+    let hourCount = 0
+}
+
+function presence()
+{
+    let sign = false
+    const hourDone = 8
+}
+
+function documentLoad()
+{
+    let signedAgreement = false
+    let trainingProject = false
+    let finalReport = false
+}
