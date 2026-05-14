@@ -1,30 +1,149 @@
 <!DOCTYPE html>
-    <head>
-        <title>
-                Teacher - FSL Mgr
-        </title>
 
-        <link rel="icon" type="image/x-icon" href="../../pics/CoaX_logo.png">
+<html>
 
-        <script type="text/javascript" src="../js/admin.js"></script>
-    </head>
+  <head>
 
-    <body>
-        <input id="txtSector" type="text" value="Sector">
-        <input id="txtLocation" type="text" value="Location">
-        <input id="txtMaxStudents" type="text" value="Max Students">
-        <input id="txtReferent" type="text" value="Referent">
-        <input id="txtHistory" type="text" value="History">
+    <title>Teacher - FSL Mgr</title>
 
-        <br>
+    <link rel="icon" type="image/x-icon" href="../../pics/CoaX_logo.png">
+    <link rel="stylesheet" href="../gui.css">
+   
+    <script type="text/javascript" src="../js/admin.js"></script>
+  
+</head>
 
-        <input id="txtAchievement" type="text" value="Achievement">
-        <input id="txtSkill" type="text" value="Skill">
-        <input id="txtWorkingPeriod" type="text" value="Working Period">
-        <input id="txtHourCount" type="text" value="Hour Count">
+  <body>
 
-        <br>
+    
+    <nav class="nav">
 
-        <button id="btnSave" onclick="saveFile">Save</button>
-    </body>
+      <a class="nav-logo">FSL <span>Manager</span></a>
+   
+    </nav>
+
+    <div class="dash-layout">
+
+      <div class="sidebar">
+
+        <div class="sidebar-user">
+
+          <div class="sidebar-avatar">TC</div>
+          <div class="sidebar-name">Docente</div>
+          <div class="sidebar-badge">Teacher</div>
+       
+        </div>
+
+        <div class="sidebar-section">Menu</div>
+      
+        <a class="sidebar-item active">
+        
+            <span class="si">🏫</span> Stage
+      
+        </a>
+      
+        <a class="sidebar-item">
+        
+            <span class="si">📊</span> Skills
+        </a>
+
+      </div>
+
+     
+      <div class="dash-main">
+
+        <div class="dash-topbar">
+
+          <div>
+
+            <h2>Internship Management</h2>
+
+            <p>Enter and update your internship data</p>
+
+          </div>
+
+          <button class="btn-primary" onclick="saveFile()">Save</button>
+
+        </div>
+
+       
+        <div class="contact-form" style="margin-bottom: 1.5rem;">
+
+          <h3>Internship Data</h3>
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label>Settore</label>
+
+              <input id="txtSector" type="text" placeholder="es. Informatica">
+           
+            </div>
+
+            <div class="form-group">
+
+              <label>Sede</label>
+
+              <input id="txtLocation" type="text" placeholder="es. Milano">
+          
+            </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label>Max Studenti</label>
+
+              <input id="txtMaxStudents" type="number" placeholder="es. 20">
+
+            </div>
+
+            <div class="form-group">
+
+              <label>Referente</label>
+              <input id="txtReferent" type="text" placeholder="Nome e cognome">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Storico</label>
+            <input id="txtHistory" type="text" placeholder="Note storiche...">
+          </div>
+        </div>
+
+        <!-- DATI COMPETENZE -->
+        <div class="contact-form">
+          <h3>Competenze & Ore</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Achievement</label>
+              <input id="txtAchievement" type="text" placeholder="...">
+            </div>
+            <div class="form-group">
+              <label>Competenza</label>
+              <input id="txtSkill" type="text" placeholder="...">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Periodo lavorativo</label>
+              <input id="txtWorkingPeriod" type="text" placeholder="es. 2024-Q1">
+            </div>
+            <div class="form-group">
+              <label>Conteggio ore</label>
+              <input id="txtHourCount" type="number" placeholder="0">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </body>
 </html>
