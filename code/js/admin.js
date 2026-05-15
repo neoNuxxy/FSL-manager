@@ -47,7 +47,7 @@ function courseInfoCheck()
 
 function saveFile()
 {
-    let fileModel =
+    var fileModel =
     {
         sector: document.getElementById("txtSector").value,
         location: document.getElementById("txtLocation").value,
