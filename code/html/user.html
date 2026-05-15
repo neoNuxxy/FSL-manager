@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student - FSL Mgr</title>
+    <link rel="icon" type="image/x-icon" href="../../pics/CoaX_logo.png">
+    <link rel="stylesheet" href="../gui.css">
+    <script type="text/javascript" src="../js/user.js"></script>
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <a class="nav-logo">FSL <span>Manager</span></a>
+    </nav>
+
+    <!-- LAYOUT DASHBOARD -->
+    <div class="dash-layout">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="sidebar-user">
+          <div class="sidebar-avatar">ST</div>
+          <div class="sidebar-name">Studente</div>
+          <div class="sidebar-badge">Tirocinante</div>
+        </div>
+        <div class="sidebar-section">Menu</div>
+        <a class="sidebar-item active">
+          <span class="si">📋</span> Dashboard
+        </a>
+        <a class="sidebar-item">
+          <span class="si">📄</span> Documenti
+        </a>
+      </div>
+
+      <!-- CONTENUTO PRINCIPALE -->
+      <div class="dash-main">
+
+        <div class="dash-topbar">
+          <div>
+            <h2>La mia Dashboard</h2>
+            <p>Riepilogo tirocinio</p>
+          </div>
+          <button class="btn-primary" onclick="saveFile()">Salva</button>
+        </div>
+
+        <!-- ORE + DOCUMENTI -->
+        <div class="student-top-grid">
+
+          <!-- ORE -->
+          <div class="hours-card">
+            <h4>Ore Tirocinio</h4>
+            <div class="hours-inner">
+              <div class="hours-details">
+                <div class="form-group">
+                  <label>Firma presenze</label>
+                  <input id="txtSign" type="text" placeholder="es. 2024-06-01">
+                </div>
+                <div class="form-group" style="margin-top: 10px;">
+                  <label>Ore svolte</label>
+                  <input id="txtHourDone" type="number" placeholder="es. 120">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOCUMENTI -->
+          <div class="doc-card">
+            <h4>Documenti</h4>
+
+            <div class="doc-item">
+              <span class="doc-item-name">Convenzione firmata</span>
+              <input id="txtSignedAgreement" type="text" 
+                     placeholder="Stato / link" 
+                     style="background:transparent; border:none; border-bottom:0.5px solid rgba(55,138,221,0.32); color:var(--text); font-size:12px; outline:none; width:140px; text-align:right;">
+            </div>
+
+            <div class="doc-item">
+              <span class="doc-item-name">Progetto formativo</span>
+              <input id="txtTrainingProject" type="text" 
+                     placeholder="Stato / link"
+                     style="background:transparent; border:none; border-bottom:0.5px solid rgba(55,138,221,0.32); color:var(--text); font-size:12px; outline:none; width:140px; text-align:right;">
+            </div>
+
+            <div class="doc-item">
+              <span class="doc-item-name">Relazione finale</span>
+              <input id="txtFinalReport" type="text" 
+                     placeholder="Stato / link"
+                     style="background:transparent; border:none; border-bottom:0.5px solid rgba(55,138,221,0.32); color:var(--text); font-size:12px; outline:none; width:140px; text-align:right;">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
