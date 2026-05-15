@@ -41,8 +41,6 @@ function courseInfoCheck()
     {
         alert("The information inserted is invalid!")
     }
-
-    
 }
 
 function saveFile()
@@ -61,8 +59,8 @@ function saveFile()
         hourCount: parseInt(document.getElementById("txtHourCount").value)
     };
 
-    const fs = require("fs")
-    let datajson = fs.readFileSync("../../data/data.json", "utf-8")
+    const fileModel = require("fileModel")
+    let datajson = fileModel.readFileSync("../../data/data.json", "utf-8")
     let data = JSON.parse(datajson)
     
     data.push(fileModel)
