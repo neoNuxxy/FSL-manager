@@ -47,9 +47,6 @@ function courseInfoCheck()
 
 function saveFile()
 {
-    const fs = require("fs");
-    let data = fs.readFileSync("../../data/data.json", "utf-8");
-
     const fileModel =
     {
         sector: document.getElementById("txtSector").value,
@@ -64,9 +61,12 @@ function saveFile()
         hourCount: parseInt(document.getElementById("txtHourCount").value)
     };
 
-    let dataAux = JSON.parse(fileModel);
+    const fs = require("fs");
+    let data = fs.readFileSync("../../data/data.json", "utf-8");
+    let dataAux = JSON.parse(data);
+    
     dataAux.push(fileModel);
-    data = JSON.stringify(fileModel);
+    data = JSON.stringify(dataAux);
 
     fs.writeFileSync("../../data/data.json", data, "utf-8");
 }
