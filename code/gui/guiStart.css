@@ -5,16 +5,16 @@
   --blue-light: #e6f1fb;
   --blue-mid:   #378add;
   --blue-dark:  #0c447c;
-  --dark:       #0e1621;
-  --dark2:      #131c2b;
-  --dark3:      #1b2638;
-  --text:       #e8f0fe;
-  --text2:      #8fa8cc;
+  --dark:       #3CB4FA;
+  --dark2:      #c5e0ff;
+  --dark3:      #9bc1fe;
+  --text:       #2a8fff;
+  --text2:      #295086;
   --text3:      #4a6a99;
   --border:     rgba(55,138,221,0.18);
   --border2:    rgba(55,138,221,0.32);
   --accent:     #2a8fff;
-  --accent2:    #5aadff;
+  --accent2:    #f0ad55;
   --warn:       #e8a320;
   --success:    #2bb57a;
   --danger:     #d94f4f;
@@ -34,9 +34,14 @@ html, body {
 
 .nav {
 
-  position: sticky; top: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2.5rem; height: 56px;
+  position: sticky; 
+  top: 0; 
+  z-index: 100;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 0 2.5rem; 
+  height: 56px;
   background: var(--dark2);
   border-bottom: 0.5px solid var(--border);
 }
@@ -57,7 +62,9 @@ html, body {
 .nav-links {
       
       display: flex;
-       gap: 2px;
+      gap: 20px;
+      
+      
  }
 
 .nav-link {
@@ -73,6 +80,7 @@ html, body {
   font-family: inherit; 
   text-decoration: none; 
   display: inline-block;
+  margin-right: 30px;
 }
 
 .nav-link:hover  {
@@ -107,6 +115,7 @@ html, body {
 
   background: var(--accent); 
   color: #fff;
+  
   padding: 11px 24px; 
   border-radius: 8px;
   font-size: 14px; 
@@ -220,6 +229,7 @@ html, body {
       
       font-size: 28px; 
       font-weight: 800; 
+      text-align: center;
       color: var(--accent2); 
 }
 
@@ -684,190 +694,6 @@ html, body {
       font-size: 11px; 
       color: var(--text2); }
 
-/* LOGIN  */
-
-.login-wrap { 
-      
-      display: flex; 
-      min-height: 500px; 
-}
-
-.login-side {
-
-  width: 44%; 
-  background: var(--dark2);
-  border-right: 0.5px solid var(--border);
-  padding: 3rem 3.5rem;
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center;
-}
-
-.login-side h2 { 
-      
-      font-size: 1.7rem; 
-      font-weight: 700; 
-      margin-bottom: 0.4rem; 
-}
-
-.login-side > p {
-
-  color: var(--text2); 
-  font-size: 13px;
-  margin-bottom: 1.8rem; 
-  line-height: 1.7;
-}
-
-.login-tabs {
-
-  display: flex; 
-  background: var(--dark3);
-  border-radius: 9px; 
-  padding: 3px; 
-  margin-bottom: 1.6rem;
-}
-
-.login-tab {
-
-  flex: 1; 
-  padding: 8px; 
-  font-size: 12px; 
-  font-weight: 500;
-  border-radius: 7px; 
-  border: none; 
-  cursor: pointer;
-  background: none; 
-  color: var(--text2); 
-  font-family: inherit;
-  transition: all 0.2s;
-}
-
-.login-tab.active {
-
-  background: var(--dark2); 
-  color: var(--accent2);
-  border: 0.5px solid var(--border);
-}
-
-.login-form { 
-      
-      display: flex; 
-      flex-direction: column; 
-      gap: 12px; 
-}
-
-.login-form input {
-
-  background: var(--dark3); 
-  border: 0.5px solid var(--border);
-  color: var(--text); 
-  font-size: 13px; 
-  padding: 11px 13px;
-  border-radius: 8px; 
-  outline: none; 
-  font-family: inherit;
-  transition: border-color 0.2s;
-}
-
-.login-form input:focus { 
-      
-      border-color: var(--accent); 
-}
-
-.login-options {
-
-  display: flex; 
-  align-items: center;
-  justify-content: space-between; 
-  margin-top: -4px;
-}
-
-.login-options label {
-
-  font-size: 12px; 
-  color: var(--text2);
-  display: flex; 
-  align-items: center; 
-  gap: 6px; 
-  cursor: pointer;
-}
-
-.login-options span { 
-      
-      font-size: 12px; 
-      color: var(--accent2); 
-      cursor: pointer; 
-}
-
-.login-options span:hover { 
-      
-      text-decoration: underline; 
-}
-
-.login-btn {
-
-  background: var(--accent); 
-  color: #fff; 
-  padding: 12px;
-  border-radius: 8px; 
-  font-size: 14px; 
-  font-weight: 600;
-  border: none; 
-  cursor: pointer; 
-  font-family: inherit;
-  margin-top: 4px; 
-  transition: background 0.2s;
-}
-
-.login-btn:hover { 
-
-      background: var(--accent2); 
-}
-
-.login-visual {
-
-  flex: 1; 
-  display: flex; 
-  align-items: center;
-  justify-content: center; 
-  position: relative; 
-  overflow: hidden;
-}
-
-.login-visual::before {
-
-  content: ''; 
-  position: absolute;
-  width: 350px; 
-  height: 350px;
-  background: radial-gradient(circle, rgba(42,143,255,0.1) 0%, transparent 68%);
-  border-radius: 50%;
-}
-
-.login-visual-text {
-
-  text-align: center; 
-  position: relative; 
-  z-index: 1; 
-  padding: 2rem;
-}
-
-.login-visual-text h3 {
-
-  font-size: 1.4rem; 
-  font-weight: 700;
-  color: var(--accent2); 
-  margin-bottom: 10px;
-}
-
-.login-visual-text p {
-
-  font-size: 13px; 
-  color: var(--text2);
-  line-height: 1.8; 
-  max-width: 260px; 
-  margin: 0 auto;
-}
 
 /* DASHBOARD LAYOUT  */
 
@@ -1234,195 +1060,6 @@ table tr:last-child td {
       background: var(--danger); 
 }
 
-/*STUDENT DASHBOARD */
-
-.student-top-grid { 
-      
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      gap: 14px; 
-      margin-bottom: 1.5rem; 
-}
-
-.hours-card {
-
-  background: var(--dark2); 
-  border: 0.5px solid var(--border);
-  border-radius: 11px; 
-  padding: 1.2rem;
-}
-
-.hours-card h4 {
-
-  font-size: 12px; 
-  font-weight: 600; 
-  margin-bottom: 14px;
-  color: var(--text2); 
-  text-transform: uppercase; 
-  letter-spacing: 0.6px;
-}
-
-.hours-inner { 
-      
-      display: flex; 
-      align-items: center; 
-      gap: 18px; 
-}
-
-.ring-wrap {
-      
-      position: relative; 
-      width: 80px; 
-      height: 80px; 
-      flex-shrink: 0; 
-}
-
-.ring-wrap svg { 
-      transform: rotate(-90deg); 
-}
-
-.ring-center {
-
-  position: absolute; top: 50%; 
-  left: 50%;
-  transform: translate(-50%,-50%); 
-  text-align: center; 
-  pointer-events: none;
-}
-
-.ring-center .rn { 
-      
-      font-size: 15px; 
-      font-weight: 700; 
-      color: var(--accent2); 
-}
-
-.ring-center .rl { 
-      
-      font-size: 9px; 
-      color: var(--text3); 
-
-}
-.hours-details h3 { 
-      
-      font-size: 22px; 
-      font-weight: 700; 
-}
-
-.hours-details p {
-      
-      font-size: 12px; 
-      color: var(--text2); 
-      margin-top: 3px; 
-}
-
-.hours-details .missing{ 
-      
-      font-size: 11px; 
-      color: var(--warn);    
-      margin-top: 6px; 
-}
-
-.hours-details .done { 
-      
-      font-size: 11px; 
-      color: var(--success); 
-      margin-top: 6px; 
-}
-
-.doc-card {
-
-  background: var(--dark2); 
-  border: 0.5px solid var(--border);
-  border-radius: 11px; 
-  padding: 1.2rem;
-}
-
-.doc-card h4 {
-
-  font-size: 12px; 
-  font-weight: 600; 
-  margin-bottom: 12px;
-  color: var(--text2); 
-  text-transform: uppercase; 
-  letter-spacing: 0.6px;
-}
-
-.doc-item {
-
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between;
-  padding: 9px 0; 
-  border-bottom: 0.5px solid var(--border);
-}
-
-.doc-item:last-child { 
-      border: none; 
-}
-
-.doc-item-name { 
-
-      font-size: 12px; 
-      color: var(--text); 
-}
-
-.doc-btn {
-
-  font-size: 11px; 
-  padding: 4px 12px; 
-  border-radius: 6px;
-  border: 0.5px solid var(--border2); 
-  background: none;
-  color: var(--accent2); 
-  cursor: pointer; 
-  font-family: inherit;
-}
-
-.doc-btn.done { 
-      
-      border-color: rgba(43,181,122,0.4); 
-      color: var(--success); 
-}
-
-.project-card {
-
-  background: var(--dark2); 
-  border: 0.5px solid var(--border);
-  border-radius: 11px; 
-  padding: 1.2rem; 
-  margin-bottom: 1.5rem;
-}
-
-.project-card h4 { 
-      
-      font-size: 13px; 
-      font-weight: 600; 
-      margin-bottom: 14px; 
-}
-
-.proj-grid { 
-      
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      gap: 12px; 
-}
-
-.proj-item .pi-label {
-
-  font-size: 11px; 
-  color: var(--text3); 
-  margin-bottom: 3px;
-  text-transform: uppercase; 
-  letter-spacing: 0.5px;
-}
-
-.proj-item .pi-val { 
-      
-      font-size: 13px; 
-      color: var(--text); 
-      font-weight: 500; 
-}
 
 /*  MAP  */
 
