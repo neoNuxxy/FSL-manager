@@ -1,4 +1,4 @@
-function companiesInfo()
+function companiesInfoCheck()
 {
     let sector = ""
     let location = ""
@@ -21,7 +21,7 @@ function companiesInfo()
     }
 }
 
-function courseInfo()
+function courseInfoCheck()
 {
     let achievement = ""
     let skill = ""
@@ -41,9 +41,25 @@ function courseInfo()
     {
         alert("The information inserted is invalid!")
     }
+
+    
 }
 
 function saveFile()
 {
-    JSON.stringify()
+    const fileModel =
+    {
+        sector: document.getElementById("txtSector").value,
+        location: document.getElementById("txtLocation").value,
+        maxStudents: parseInt(document.getElementById("txtMaxStudents").value),
+        referent: document.getElementById("txtReferent").value,
+        history: document.getElementById("txtHistory").value,
+
+        achievement: document.getElementById("txtAchievement").value,
+        skill: document.getElementById("txtSkill").value,
+        workingPeriod: document.getElementById("txtWorkingPeriod").value,
+        hourCount: parseInt(document.getElementById("txtHourCount").value)
+    };
+
+    JSON.stringify(fileModel);
 }
