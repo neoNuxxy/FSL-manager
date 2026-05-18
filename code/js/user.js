@@ -11,7 +11,7 @@ function documentLoad()
     let finalReport = false
 }
 
-function saveFile()
+/*function saveFile()
 {
     const fs = require("fs");
     let data = fs.readFileSync("../../data/data.json", "utf-8");
@@ -30,9 +30,18 @@ function saveFile()
         hourCount: parseInt(document.getElementById("txtHourCount").value)
     };
 
-    let dataAux = JSON.parse(fileModel);
-    dataAux.push(fileModel);
-    data = JSON.stringify(fileModel);
+    // converte in JSON
+    const jsonString = JSON.stringify(fileModel, null, 2);
 
-    fs.writeFileSync("../../data/data.json", data, "utf-8");
-}
+    // crea il file
+    const blob = new Blob([jsonString], { type: "application/json" });
+
+    // crea link download
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.download = "data.json";
+
+    // avvia download
+    link.click();
+}*/

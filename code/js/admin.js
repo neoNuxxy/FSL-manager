@@ -58,13 +58,19 @@ function saveFile()
         workingPeriod: document.getElementById("txtWorkingPeriod").value,
         hourCount: parseInt(document.getElementById("txtHourCount").value)
     };
-
-    const fileModel = require("fileModel")
-    let datajson = fileModel.readFileSync("../../data/data.json", "utf-8")
-    let data = JSON.parse(datajson)
     
-    data.push(fileModel)
-    datajson = JSON.stringify(data)
+    // converte in JSON
+    const jsonString = JSON.stringify(fileModel, null, 2);
 
-    fs.writeFileSync("../../data/data.json", datajson, "utf-8")
+    // crea il file
+    const blob = new Blob([jsonString], { type: "application/json" });
+
+    // crea link download
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.download = "data.json";
+
+    // avvia download
+    link.click();
 }
