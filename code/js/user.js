@@ -1,33 +1,26 @@
 function presence()
 {
-    let sign = false
-    const hourDone = 8
+    let sign = ""
+    let hourDone = 0
 }
 
 function documentLoad()
 {
-    let signedAgreement = false
-    let trainingProject = false
-    let finalReport = false
+    let signedAgreement = ""
+    let trainingProject = ""
+    let finalReport = ""
 }
 
-/*function saveFile()
+function saveFile()
 {
-    const fs = require("fs");
-    let data = fs.readFileSync("../../data/data.json", "utf-8");
-
     const fileModel =
     {
-        sector: document.getElementById("txtSector").value,
-        location: document.getElementById("txtLocation").value,
-        maxStudents: parseInt(document.getElementById("txtMaxStudents").value),
-        referent: document.getElementById("txtReferent").value,
-        history: document.getElementById("txtHistory").value,
+        sign: document.getElementById("txtSign").value,
+        hourDone: parseInt(document.getElementById("txtHourDone").value),
 
-        achievement: document.getElementById("txtAchievement").value,
-        skill: document.getElementById("txtSkill").value,
-        workingPeriod: document.getElementById("txtWorkingPeriod").value,
-        hourCount: parseInt(document.getElementById("txtHourCount").value)
+        signedAgreement: document.getElementById("txtSignedAgreement").value,
+        trainingProject: document.getElementById("txtTrainingProject").value,
+        finalReport: document.getElementById("txtFinalReport").value,
     };
 
     // converte in JSON
@@ -44,4 +37,4 @@ function documentLoad()
 
     // avvia download
     link.click();
-}*/
+}
