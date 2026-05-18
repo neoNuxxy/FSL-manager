@@ -58,13 +58,6 @@ function saveFile()
         workingPeriod: document.getElementById("txtWorkingPeriod").value,
         hourCount: parseInt(document.getElementById("txtHourCount").value)
     };
-
-    const fileModel = require("fileModel")
-    let datajson = fileModel.readFileSync("../../data/data.json", "utf-8")
-    let data = JSON.parse(datajson)
     
-    data.push(fileModel)
-    datajson = JSON.stringify(data)
-
-    fs.writeFileSync("../../data/data.json", datajson, "utf-8")
+    z
 }
