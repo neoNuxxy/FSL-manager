@@ -59,5 +59,18 @@ function saveFile()
         hourCount: parseInt(document.getElementById("txtHourCount").value)
     };
     
-    z
+    // converte in JSON
+    const jsonString = JSON.stringify(fileModel, null, 2);
+
+    // crea il file
+    const blob = new Blob([jsonString], { type: "application/json" });
+
+    // crea link download
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.download = "data.json";
+
+    // avvia download
+    link.click();
 }
