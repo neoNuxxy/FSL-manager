@@ -248,11 +248,12 @@ html, body {
 
 /* SECTIONS */
 
-.section { 
-      
-      padding: 3.5rem 4rem; 
+.section {
+  padding: 3.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centra tutto il contenuto */
 }
-
 .section-alt {
 
   background: var(--dark2);
@@ -647,10 +648,9 @@ html, body {
 }
 
 .contacts-grid {
-
-  display: grid;  
-  gap: 164px; 
- 
+  display: grid;
+  margin: 0 auto;
+  gap: 60px;
 }
 
 .contact-person {
@@ -659,8 +659,8 @@ html, body {
   border: 0.5px solid var(--border);
   border-radius: 11px; 
    padding: 2.2rem;        /* più spazio interno */
-  min-width: 320px;       /* larghezza minima */
-  min-height: 320px;
+  min-width: 280px;       /* larghezza minima */
+  min-height: 280px;
   text-align: center;
   transition: border-color 0.2s;
 }
@@ -672,11 +672,11 @@ html, body {
 
 .contact-avatar {
 
-  width: 50px; 
-  height: 50px; 
+  width: 60px; 
+  height: 60px; 
   border-radius: 50%;
   background: rgba(42,143,255,0.18); 
-  color: var(--accent2);
+  color: var(--accent);
   font-weight: 800; 
   font-size: 16px;
   display: flex; 
@@ -685,22 +685,18 @@ html, body {
   margin: 0 auto 10px;
 }
 
-.contact-person h4 { 
-      
-      font-size: 13px; 
-      font-weight: 600; 
-}
 
 .contact-person .role { 
       
-      font-size: 11px; 
-      color: var(--accent2); 
+      font-size: 14px; 
+      color: var(--accent); 
       margin: 3px 0 4px; 
+      font-weight: bold;
 }
 
 .contact-person .email{ 
       
-      font-size: 11px; 
+      font-size: 13px; 
       color: var(--text2); }
 
 
