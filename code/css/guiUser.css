@@ -200,17 +200,19 @@ html, body {
       color: var(--accent2); 
 }
 
-.sidebar-item .si { 
-      
-      font-size: 15px; 
+.sidebar-item .si {
+  font-size: 15px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 /*  DASHBOARD MAIN */
 
-.dash-main { 
-      
-      padding: 1.8rem 2rem; 
-      overflow: auto; 
+.dash-main {
+  padding: 1.8rem 2rem;
+  overflow: auto;
+  max-width: 900px;  /* aggiunta */
 }
 
 .dash-topbar {
@@ -248,6 +250,7 @@ html, body {
   font-family: inherit;
   transition: background 0.2s;
   display: flex;
+  align-items: center;
   gap: 5px;
 }
 
@@ -482,23 +485,6 @@ html, body {
       margin-bottom: 1.5rem; 
 }
 
-.hours-card {
-
-  background: var(--dark2); 
-  border: 0.5px solid var(--border);
-  border-radius: 11px; 
-  padding: 1.2rem;
-}
-
-.hours-card h4 {
-
-  font-size: 12px; 
-  font-weight: 600; 
-  margin-bottom: 14px;
-  color: var(--text2); 
-  text-transform: uppercase; 
-  letter-spacing: 0.6px;
-}
 
 .hours-inner { 
       
@@ -568,36 +554,42 @@ html, body {
       margin-top: 6px; 
 }
 
-.doc-card {
-
-  background: var(--dark2); 
+.dash-card {
+  background: var(--dark2);
   border: 0.5px solid var(--border);
-  border-radius: 11px; 
+  border-radius: 11px;
   padding: 1.2rem;
 }
 
-.doc-card h4 {
-
-  font-size: 12px; 
-  font-weight: 600; 
+.dash-card h4 {
+  font-size: 12px;
+  font-weight: 600;
   margin-bottom: 12px;
-  color: var(--text2); 
-  text-transform: uppercase; 
+  color: var(--text2);
+  text-transform: uppercase;
   letter-spacing: 0.6px;
 }
 
 .doc-item {
-
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 9px 0; 
+  padding: 9px 8px;           /* un po' di padding laterale per vedere lo sfondo hover */
   border-bottom: 0.5px solid var(--border);
+  border-radius: 6px;
+  margin: 0 -8px;             /* compensa il padding per mantenere l'allineamento */
+  transition: background 0.15s;
 }
 
-.doc-item:last-child { 
-      border: none; 
+.doc-item:hover {
+  background: rgba(42,143,255,0.05);
 }
+
+.doc-item:last-child {
+  border: none;
+}
+
+
 
 .doc-item-name { 
 
@@ -621,6 +613,23 @@ html, body {
       
       border-color: rgba(43,181,122,0.4); 
       color: var(--success); 
+}
+
+.doc-input {
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid var(--border2);
+  color: var(--text);
+  font-size: 12px;
+  outline: none;
+  width: 140px;
+  text-align: right;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.doc-input:focus {
+  border-bottom-color: var(--accent);
 }
 
 .project-card {

@@ -1,122 +1,75 @@
 <!DOCTYPE html>
-
 <html>
-
   <head>
-
     <title>Teacher - FSL Mgr</title>
-
     <link rel="icon" type="image/x-icon" href="../../pics/CoaX_logo.png">
     <link rel="stylesheet" href="../css/guiUser.css">
-   
     <script type="text/javascript" src="../js/admin.js"></script>
-  
-</head>
-
+  </head>
   <body>
-
-    
     <nav class="nav">
-
       <a class="nav-logo">FSL <span>Manager</span></a>
-   
     </nav>
 
     <div class="dash-layout">
-
       <div class="sidebar">
-
         <div class="sidebar-user">
-
           <div class="sidebar-avatar">TC</div>
           <div class="sidebar-name">Docente</div>
           <div class="sidebar-badge">Teacher</div>
-       
         </div>
-
         <div class="sidebar-section">Menu</div>
-      
         <a class="sidebar-item active">
-        
-            <span class="si">🏫</span> Stage
-      
+          <span class="si">🏫</span> Stage
         </a>
-      
         <a class="sidebar-item">
-        
-            <span class="si">📊</span> Skills
+          <span class="si">📊</span> Skills
         </a>
-
       </div>
 
-     
       <div class="dash-main">
-
         <div class="dash-topbar">
-
           <div>
-
             <h2>Internship Management</h2>
-
             <p>Enter and update your internship data</p>
-
           </div>
-          <button class="btn-primary" onclick="companiesInfoCheck(), courseInfoCheck(), saveFile()">Save</button>
-
+          <button class="btn-primary" onclick="companiesInfoCheck(), courseInfoCheck(), saveFile()">
+            💾 Save
+          </button>
         </div>
 
-       
+        <div class="section-label" style="margin-bottom: 10px;">Internship Info</div>
         <div class="contact-form" style="margin-bottom: 1.5rem;">
-
           <h3>Internship Data</h3>
-
           <div class="form-row">
-
             <div class="form-group">
-
               <label>Sector</label>
-
               <input id="txtSector" type="text" placeholder="es. Informatica">
-           
             </div>
-
             <div class="form-group">
-
               <label>Location</label>
-
               <input id="txtLocation" type="text" placeholder="es. Milano">
-          
             </div>
-
           </div>
-
           <div class="form-row">
-
             <div class="form-group">
-
               <label>Max Students</label>
-
               <input id="txtMaxStudents" type="number" placeholder="es. 20">
-
             </div>
-
             <div class="form-group">
-
               <label>Referent</label>
               <input id="txtReferent" type="text" placeholder="Nome e cognome">
             </div>
           </div>
-
           <div class="form-group">
             <label>History</label>
             <input id="txtHistory" type="text" placeholder="Note storiche...">
           </div>
         </div>
 
-        <!-- DATI COMPETENZE -->
+        <div class="section-label" style="margin-bottom: 10px;">Competenze</div>
         <div class="contact-form">
           <h3>Skills & Hours</h3>
-
           <div class="form-row">
             <div class="form-group">
               <label>Achievement</label>
@@ -127,18 +80,16 @@
               <input id="txtSkill" type="text" placeholder="...">
             </div>
           </div>
-
           <div class="form-row">
             <div class="form-group">
-              <label>Working period</label>
+              <label>Working Period</label>
               <input id="txtWorkingPeriod" type="text" placeholder="es. 2024-Q1">
             </div>
             <div class="form-group">
-              <label>Hour count</label>
+              <label>Hour Count</label>
               <input id="txtHourCount" type="number" placeholder="0">
             </div>
           </div>
-
         </div>
 
       </div>

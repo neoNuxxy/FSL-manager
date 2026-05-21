@@ -6,18 +6,12 @@
     <link rel="stylesheet" href="../css/guiUser.css">
     <script type="text/javascript" src="../js/user.js"></script>
   </head>
-
   <body>
-
-    <!-- NAVBAR -->
     <nav class="nav">
       <a class="nav-logo">FSL <span>Manager</span></a>
     </nav>
 
-    <!-- LAYOUT DASHBOARD -->
     <div class="dash-layout">
-
-      <!-- SIDEBAR -->
       <div class="sidebar">
         <div class="sidebar-user">
           <div class="sidebar-avatar">ST</div>
@@ -33,25 +27,24 @@
         </a>
       </div>
 
-      <!-- CONTENUTO PRINCIPALE -->
       <div class="dash-main">
-
         <div class="dash-topbar">
           <div>
             <h2>La mia Dashboard</h2>
             <p>Riepilogo tirocinio</p>
           </div>
-          <button class="btn-primary" onclick="presence(); documentLoad(); saveFile()">Salva</button>
+          <button class="btn-primary" onclick="presence(); documentLoad(); saveFile()">
+            💾 Salva
+          </button>
         </div>
 
-        <!-- ORE + DOCUMENTI -->
         <div class="student-top-grid">
 
           <!-- ORE -->
-          <div class="hours-card">
+          <div class="dash-card">
             <h4>Ore Tirocinio</h4>
             <div class="hours-inner">
-              <div class="hours-details">
+              <div class="hours-details" style="width: 100%;">
                 <div class="form-group">
                   <label>Firma presenze</label>
                   <input id="txtSign" type="text" placeholder="es. 2024-06-01">
@@ -65,35 +58,24 @@
           </div>
 
           <!-- DOCUMENTI -->
-          <div class="doc-card">
+          <div class="dash-card">
             <h4>Documenti</h4>
-
             <div class="doc-item">
               <span class="doc-item-name">Convenzione firmata</span>
-              <input id="txtSignedAgreement" type="text" 
-                     placeholder="Stato / link" 
-                     style="background:transparent; border:none; border-bottom:0.5px solid rgba(55,138,221,0.32); color:var(--text); font-size:12px; outline:none; width:140px; text-align:right;">
+              <input id="txtSignedAgreement" type="text" class="doc-input" placeholder="Stato / link">
             </div>
-
             <div class="doc-item">
               <span class="doc-item-name">Progetto formativo</span>
-              <input id="txtTrainingProject" type="text" 
-                     placeholder="Stato / link"
-                     style="background:transparent; border:none; border-bottom:0.5px solid rgba(55,138,221,0.32); color:var(--text); font-size:12px; outline:none; width:140px; text-align:right;">
+              <input id="txtTrainingProject" type="text" class="doc-input" placeholder="Stato / link">
             </div>
-
             <div class="doc-item">
               <span class="doc-item-name">Relazione finale</span>
-              <input id="txtFinalReport" type="text" 
-                     placeholder="Stato / link"
-                     style="background:transparent; border:none; border-bottom:0.5px solid rgba(55,138,221,0.32); color:var(--text); font-size:12px; outline:none; width:140px; text-align:right;">
+              <input id="txtFinalReport"     type="text" class="doc-input" placeholder="Stato / link">
             </div>
-
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-
   </body>
 </html>
