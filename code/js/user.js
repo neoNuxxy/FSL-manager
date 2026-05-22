@@ -21,20 +21,13 @@ function saveFile()
         signedAgreement: document.getElementById("txtSignedAgreement").value,
         trainingProject: document.getElementById("txtTrainingProject").value,
         finalReport: document.getElementById("txtFinalReport").value,
-    };
+    }
 
-    // converte in JSON
-    const jsonString = JSON.stringify(fileModel, null, 2);
+    const jsonString = JSON.stringify(fileModel, null, 2)
+    const blob = new Blob([jsonString], { type: "application/json" })
+    const link = document.createElement("a")
 
-    // crea il file
-    const blob = new Blob([jsonString], { type: "application/json" });
-
-    // crea link download
-    const link = document.createElement("a");
-
-    link.href = URL.createObjectURL(blob);
-    link.download = "data.json";
-
-    // avvia download
-    link.click();
+    link.href = URL.createObjectURL(blob)
+    link.download = "user_data.json"
+    link.click()
 }

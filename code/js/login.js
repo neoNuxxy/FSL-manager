@@ -11,16 +11,10 @@ function login()
     try
     {
         if(document.getElementById("txtUser").value == nameAdmin && document.getElementById("txtPass").value == passAdmin)
-        {
-            alert("Welcome teacher")
             window.location = "../html/admin.html"
-        }
 
         else if(document.getElementById("txtUser").value == nameUser && document.getElementById("txtPass").value == passUser)
-        {
-            alert("Welcome student")
             window.location = "../html/user.html"
-        }
 
         else
         {
