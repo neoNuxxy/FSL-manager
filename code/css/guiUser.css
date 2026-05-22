@@ -48,9 +48,12 @@ html, body {
 
 .nav-logo {
 
-  font-size: 18px; font-weight: 800;
-  color: var(--accent2); letter-spacing: -0.5px;
-  cursor: pointer; text-decoration: none;
+  font-size: 18px; 
+  font-weight: 800;
+  color: var(--accent2); 
+  letter-spacing: -0.5px;
+  cursor: pointer; 
+  text-decoration: none;
 
 }
 .nav-logo span {
@@ -110,7 +113,7 @@ html, body {
  .dash-layout {
 
   display: grid; 
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 320px 1fr;
   min-height: calc(100vh - 56px);
 }
 
@@ -169,7 +172,7 @@ html, body {
   font-size: 10px; 
   text-transform: uppercase; 
   letter-spacing: 1px;
-  color: var(--text3); 
+  color: var(--text); 
   padding: 12px 12px 4px; 
   font-weight: 700;
 }
@@ -188,6 +191,7 @@ html, body {
   text-decoration: none; 
   transition: all 0.15s;
 }
+
 .sidebar-item:hover { 
       
       background: rgba(42,143,255,0.08); 
@@ -201,6 +205,7 @@ html, body {
 }
 
 .sidebar-item .si {
+
   font-size: 15px;
   width: 20px;
   text-align: center;
@@ -210,9 +215,10 @@ html, body {
 /*  DASHBOARD MAIN */
 
 .dash-main {
+
   padding: 1.8rem 2rem;
   overflow: auto;
-  max-width: 900px;  /* aggiunta */
+  
 }
 
 .dash-topbar {
@@ -225,8 +231,9 @@ html, body {
 
 .dash-topbar h2 { 
       
-      font-size: 1.2rem; 
+      font-size: 1.7rem; 
       font-weight: 700; 
+      color: var(--text); 
 }
 
 .dash-topbar p {
@@ -409,6 +416,7 @@ html, body {
       
       border-color: var(--accent); 
 }
+
 .form-group select option { 
       
       background: var(--dark3); 
@@ -507,7 +515,8 @@ html, body {
 
 .ring-center {
 
-  position: absolute; top: 50%; 
+  position: absolute; 
+  top: 50%; 
   left: 50%;
   transform: translate(-50%,-50%); 
   text-align: center; 
@@ -555,6 +564,7 @@ html, body {
 }
 
 .dash-card {
+
   background: var(--dark2);
   border: 0.5px solid var(--border);
   border-radius: 11px;
@@ -562,6 +572,7 @@ html, body {
 }
 
 .dash-card h4 {
+
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 12px;
@@ -571,25 +582,26 @@ html, body {
 }
 
 .doc-item {
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 9px 8px;           /* un po' di padding laterale per vedere lo sfondo hover */
+  padding: 9px 8px;          
   border-bottom: 0.5px solid var(--border);
   border-radius: 6px;
-  margin: 0 -8px;             /* compensa il padding per mantenere l'allineamento */
+  margin: 0 -8px;           
   transition: background 0.15s;
 }
 
 .doc-item:hover {
+
   background: rgba(42,143,255,0.05);
 }
 
 .doc-item:last-child {
+
   border: none;
 }
-
-
 
 .doc-item-name { 
 
@@ -616,6 +628,7 @@ html, body {
 }
 
 .doc-input {
+
   background: transparent;
   border: none;
   border-bottom: 0.5px solid var(--border2);
@@ -629,6 +642,7 @@ html, body {
 }
 
 .doc-input:focus {
+
   border-bottom-color: var(--accent);
 }
 
