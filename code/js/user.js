@@ -2,6 +2,20 @@ function presence()
 {
     let sign = ""
     let hourDone = 0
+
+    try
+    {
+        sign = document.getElementById("txtSign").value
+        hourDone = parseInt(document.getElementById("txtHourDone").value)
+    }
+
+    catch(err)
+    {
+        alert("The information inserted is invalid!")
+        return
+    }
+
+    saveFile()
 }
 
 function documentLoad()
@@ -9,6 +23,21 @@ function documentLoad()
     let signedAgreement = ""
     let trainingProject = ""
     let finalReport = ""
+
+    try
+    {
+        signedAgreement = document.getElementById("txtSignedAgreement").value
+        trainingProject = document.getElementById("txtTrainingProject").value
+        finalReport = document.getElementById("txtFinalReport").value
+    }
+
+    catch(err)
+    {
+        alert("The information inserted is invalid!")
+        return
+    }
+
+    saveFile()
 }
 
 function saveFile()
