@@ -48,9 +48,12 @@ html, body {
 
 .nav-logo {
 
-  font-size: 18px; font-weight: 800;
-  color: var(--accent2); letter-spacing: -0.5px;
-  cursor: pointer; text-decoration: none;
+  font-size: 18px; 
+  font-weight: 800;
+  color: var(--accent2); 
+  letter-spacing: -0.5px;
+  cursor: pointer; 
+  text-decoration: none;
 
 }
 .nav-logo span {
@@ -100,11 +103,17 @@ html, body {
 
 .nav-cta {
 
-  background: var(--accent); color: #fff;
-  padding: 7px 18px; border-radius: 7px;
-  font-size: 13px; font-weight: 600;
-  cursor: pointer; border: none; font-family: inherit;
-  text-decoration: none; transition: background 0.2s;
+  background: var(--accent); 
+  color: #fff;
+  padding: 7px 18px; 
+  border-radius: 7px;
+  font-size: 13px; 
+  font-weight: 600;
+  cursor: pointer; 
+  border: none; 
+  font-family: inherit;
+  text-decoration: none; 
+  transition: background 0.2s;
 }
 
 .nav-cta:hover { 
@@ -733,7 +742,7 @@ html, body {
   height: 42px; 
   border-radius: 50%;
   background: rgba(42,143,255,0.2); 
-  color: var(--accent2);
+  color: #2b67d0;
   font-weight: 700; 
   font-size: 15px;
   display: flex; 

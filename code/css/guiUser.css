@@ -141,7 +141,7 @@ html, body {
   height: 42px; 
   border-radius: 50%;
   background: rgba(42,143,255,0.2); 
-  color: var(--accent2);
+  color: #2b67d0;
   font-weight: 700; 
   font-size: 15px;
   display: flex; 
