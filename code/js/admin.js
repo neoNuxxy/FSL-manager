@@ -15,10 +15,13 @@ function companiesInfoCheck()
         history = document.getElementById("txtHistory").value
     }
 
-    catch
+    catch(err)
     {
         alert("The information inserted is invalid!")
+        return
     }
+
+    saveFile()
 }
 
 function courseInfoCheck()
@@ -37,10 +40,13 @@ function courseInfoCheck()
         hourCount = parseInt(document.getElementById("txtHourCount").value)
     }
     
-    catch
+    catch(err)
     {
         alert("The information inserted is invalid!")
+        return
     }
+
+    saveFile()
 }
 
 function saveFile()
