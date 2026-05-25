@@ -82,6 +82,7 @@ function saveFile()
 }
 
 function showPage(page, el) {
+    
   document.getElementById('page-stage').style.display = 'none';
   document.getElementById('page-skills').style.display = 'none';
   document.getElementById('page-' + page).style.display = 'block';
