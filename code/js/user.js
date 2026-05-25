@@ -59,4 +59,17 @@ function saveFile()
     link.href = URL.createObjectURL(blob)
     link.download = "user_data.json"
     link.click()
+
+    
+}
+
+function showPage(page, el) {
+  document.getElementById('page-dashboard').style.display = 'none';
+  document.getElementById('page-documenti').style.display = 'none';
+  document.getElementById('page-' + page).style.display = 'block';
+
+  document.querySelectorAll('.sidebar-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  el.classList.add('active');
 }

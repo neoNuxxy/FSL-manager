@@ -19,62 +19,72 @@
           <div class="sidebar-badge">Tirocinante</div>
         </div>
         <div class="sidebar-section">Menu</div>
-        <a class="sidebar-item active">
+        <a class="sidebar-item active" onclick="showPage('dashboard', this)">
           <span class="si">📋</span> Dashboard
         </a>
-        <a class="sidebar-item">
+        <a class="sidebar-item" onclick="showPage('documenti', this)">
           <span class="si">📄</span> Documenti
         </a>
       </div>
 
       <div class="dash-main">
-        <div class="dash-topbar">
-          <div>
-            <h2>La mia Dashboard</h2>
-            <p>Riepilogo tirocinio</p>
+
+        <!-- PAGINA DASHBOARD -->
+        <div id="page-dashboard">
+          <div class="dash-topbar">
+            <div>
+              <h2>La mia Dashboard</h2>
+              <p>Riepilogo tirocinio</p>
+            </div>
+            <button class="btn-primary" onclick="presence(); documentLoad()">💾 Salva</button>
           </div>
-          <button class="btn-primary" onclick="presence(), documentLoad()">
-            💾 Salva
-          </button>
-        </div>
 
-        <div class="student-top-grid">
-
-          <!-- ORE -->
-          <div class="dash-card">
-            <h4>Ore Tirocinio</h4>
-            <div class="hours-inner">
-              <div class="hours-details" style="width: 100%;">
-                <div class="form-group">
-                  <label>Firma presenze</label>
-                  <input id="txtSign" type="text" placeholder="es. 2024-06-01">
-                </div>
-                <div class="form-group" style="margin-top: 10px;">
-                  <label>Ore svolte</label>
-                  <input id="txtHourDone" type="number" placeholder="es. 120">
+          <div class="student-top-grid">
+            <div class="dash-card">
+              <h4>Ore Tirocinio</h4>
+              <div class="hours-inner">
+                <div class="hours-details" style="width: 100%;">
+                  <div class="form-group">
+                    <label>Firma presenze</label>
+                    <input id="txtSign" type="text" placeholder="es. 2024-06-01">
+                  </div>
+                  <div class="form-group" style="margin-top: 10px;">
+                    <label>Ore svolte</label>
+                    <input id="txtHourDone" type="number" placeholder="es. 120">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- DOCUMENTI -->
-          <div class="dash-card">
-            <h4>Documenti</h4>
-            <div class="doc-item">
-              <span class="doc-item-name">Convenzione firmata</span>
-              <input id="txtSignedAgreement" type="text" class="doc-input" placeholder="Stato / link">
-            </div>
-            <div class="doc-item">
-              <span class="doc-item-name">Progetto formativo</span>
-              <input id="txtTrainingProject" type="text" class="doc-input" placeholder="Stato / link">
-            </div>
-            <div class="doc-item">
-              <span class="doc-item-name">Relazione finale</span>
-              <input id="txtFinalReport"     type="text" class="doc-input" placeholder="Stato / link">
-            </div>
+            
           </div>
-
         </div>
+
+        <!-- PAGINA DOCUMENTI -->
+        <div id="page-documenti" style="display:none;">
+          <div class="dash-topbar">
+            <div>
+              <h2>Documenti</h2>
+              <p>I tuoi documenti del tirocinio</p>
+            </div>
+          </div>
+          <div class="dash-card">
+              <h4>Documenti</h4>
+              <div class="doc-item">
+                <span class="doc-item-name">Convenzione firmata</span>
+                <input id="txtSignedAgreement" type="text" class="doc-input" placeholder="Stato / link">
+              </div>
+              <div class="doc-item">
+                <span class="doc-item-name">Progetto formativo</span>
+                <input id="txtTrainingProject" type="text" class="doc-input" placeholder="Stato / link">
+              </div>
+              <div class="doc-item">
+                <span class="doc-item-name">Relazione finale</span>
+                <input id="txtFinalReport" type="text" class="doc-input" placeholder="Stato / link">
+              </div>
+            </div>
+        </div>
+
       </div>
     </div>
   </body>

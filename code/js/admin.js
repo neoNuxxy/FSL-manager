@@ -80,3 +80,14 @@ function saveFile()
     // avvia download
     link.click();
 }
+
+function showPage(page, el) {
+  document.getElementById('page-stage').style.display = 'none';
+  document.getElementById('page-skills').style.display = 'none';
+  document.getElementById('page-' + page).style.display = 'block';
+
+  document.querySelectorAll('.sidebar-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  el.classList.add('active');
+}
