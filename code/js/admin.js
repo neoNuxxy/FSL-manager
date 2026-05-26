@@ -65,30 +65,25 @@ function saveFile()
         hourCount: parseInt(document.getElementById("txtHourCount").value)
     };
     
-    // converte in JSON
-    const jsonString = JSON.stringify(fileModel, null, 2);
+    const jsonString = JSON.stringify(fileModel, null, 2)
+    const blob = new Blob([jsonString], { type: "application/json" })
+    const link = document.createElement("a")
 
-    // crea il file
-    const blob = new Blob([jsonString], { type: "application/json" });
+    link.href = URL.createObjectURL(blob)
+    link.download = "teacher_data.json"
 
-    // crea link download
-    const link = document.createElement("a");
-
-    link.href = URL.createObjectURL(blob);
-    link.download = "teacher_data.json";
-
-    // avvia download
-    link.click();
+    link.click()
 }
 
-function showPage(page, el) {
-    
-  document.getElementById('page-stage').style.display = 'none';
-  document.getElementById('page-skills').style.display = 'none';
-  document.getElementById('page-' + page).style.display = 'block';
+function showPage(page, el)
+{
+    document.getElementById('page-stage').style.display = 'none'
+    document.getElementById('page-skills').style.display = 'none'
+    document.getElementById('page-' + page).style.display = 'block'
 
-  document.querySelectorAll('.sidebar-item').forEach(item => {
-    item.classList.remove('active');
-  });
-  el.classList.add('active');
+    document.querySelectorAll('.sidebar-item').forEach(item => {
+    item.classList.remove('active')
+    })
+
+    el.classList.add('active')
 }
