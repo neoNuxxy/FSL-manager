@@ -59,8 +59,6 @@ function saveFile()
     link.href = URL.createObjectURL(blob)
     link.download = "user_data.json"
     link.click()
-
-    
 }
 
 function showPage(page, el)
@@ -72,6 +70,6 @@ function showPage(page, el)
     document.querySelectorAll('.sidebar-item').forEach(item => {
     item.classList.remove('active')
     })
-    
+
     el.classList.add('active')
 }
