@@ -23,7 +23,7 @@
 html, body {
 
   background: var(--dark);
-  color: var(--text);
+   color: var(--text2);
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   font-size: 14px;
   min-height: 100vh;
@@ -144,25 +144,27 @@ html, body {
       background: var(--accent2);
  }
 
+
 .btn-secondary {
 
-   background: var(--accent);
-  color: #ffff;
-  padding: 11px 24px; 
+  background: transparent;
+  color: var(--accent2);
+  padding: 11px 24px;
   border-radius: 8px;
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: 600;
-  cursor: pointer; 
+  cursor: pointer;
   border: 0.5px solid var(--border2);
-  font-family: inherit; 
-  transition: background 0.2s;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s;
   text-decoration: none;
 }
 
-.btn-secondary:hover { 
+.btn-secondary:hover {
 
-    background: #f0ad55;
- }
+  background: rgba(240,173,85,0.12);
+  color: var(--accent2);
+}
 
 /*  HERO  */
 
@@ -172,6 +174,7 @@ html, body {
   background: linear-gradient(160deg, var(--dark2) 0%, var(--dark) 55%);
   position: relative; 
   overflow: hidden;
+  
 }
 
 .hero::before {
@@ -258,6 +261,8 @@ html, body {
 /* SECTIONS */
 
 .section {
+
+ background: var(--dark2);
   padding: 3.5rem 4rem;
   display: flex;
   flex-direction: column;
@@ -265,7 +270,8 @@ html, body {
 }
 .section-alt {
 
-  background: var(--dark2);
+  background: var(--dark);
+  padding: 3.5rem 4rem;
   border-top: 0.5px solid var(--border);
   border-bottom: 0.5px solid var(--border);
 }
@@ -306,17 +312,18 @@ html, body {
 
 .about-card {
 
-  background: linear-gradient(160deg, var(--dark2) 0%, var(--dark) 55%);
+  background: var(--dark2);
   border: 0.5px solid var(--border);
   border-radius: 12px; 
   padding: 1.5rem;
-  transition: border-color 0.2s;
+   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+.about-card:hover {
 
-.about-card:hover { 
-      
-      border-color: var(--border2);
- }
+  border-color: var(--border2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(42,143,255,0.1);
+}
 
 .about-card .icon {
 
@@ -434,6 +441,7 @@ html, body {
   line-height: 1.9; 
   text-decoration: none; 
   display: block;
+  transition: color 0.2s;
 }
 
 .footer a:hover { 
@@ -675,12 +683,12 @@ html, body {
   min-width: 280px;       /* larghezza minima */
   min-height: 280px;
   text-align: center;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
+.contact-person:hover {
 
-.contact-person:hover { 
-      
-      border-color: var(--border2); 
+  border-color: var(--border2);
+  transform: translateY(-2px);
 }
 
 .contact-avatar {
@@ -1296,21 +1304,8 @@ table tr:last-child td {
 
 /* ABOUT CARDS about */
 
-.about-grid-about{ 
-      
-      display: grid; 
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 16px; 
-}
 
-.about-card-about{
 
-  background:  var(--dark2) ;
-  border: 0.5px solid var(--border);
-  border-radius: 12px; 
-  padding: 1.5rem;
-  transition: border-color 0.2s;
-}
 
 .about-card-about:hover { 
       

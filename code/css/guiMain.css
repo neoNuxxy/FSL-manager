@@ -187,6 +187,7 @@ html, body {
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
+
   background: var(--dark3);
   border: 0.5px solid var(--border);
   color: var(--text);
@@ -197,10 +198,17 @@ html, body {
   font-family: inherit;
   transition: border-color 0.2s;
   width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.login-form input:focus {
+  
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(42,143,255,0.12);
 }
 
 .login-form input[type="text"]:focus,
 .login-form input[type="password"]:focus {
+
   border-color: var(--accent);
 }
 
@@ -227,11 +235,14 @@ html, body {
   border: none;
   cursor: pointer;
   font-family: inherit;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
-
 .login-btn:hover {
   background: var(--accent2);
+  transform: translateY(-1px);
+}
+.login-btn:active {
+  transform: translateY(0);
 }
 
 .login-visual {
