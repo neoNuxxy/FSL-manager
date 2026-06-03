@@ -5,11 +5,11 @@ FSL Manager is a web-based system for the comprehensive management of students' 
 
 ----------------------------
 ## Implementation objectives
-• Simplify administrative management for the school coordinator
-• Allow students to independently record daily attendance
-• View each student's hours by manually entering their hours
-• Export internship data for external processing
-• Create a solid and scalable foundation for future integration with a relational database
+• Simplify administrative management for the school coordinator  
+• Allow students to independently record daily attendance  
+• View each student's hours by manually entering their hours  
+• Export internship data for external processing  
+• Create a solid and scalable foundation for future integration with a relational database  
 
 
 ## CoaX Group
