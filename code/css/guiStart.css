@@ -510,7 +510,7 @@ html, body {
 
 .footer-bottom {
 
-  background: var(--dark2); 
+  background: var(--dark); 
   border-top: 0.5px solid var(--border);
   padding: 1rem 4rem;
   display: flex; 
@@ -678,6 +678,18 @@ html, body {
 .contact-person {
 
   background: var(--dark4); 
+  border: 0.5px solid var(--border);
+  border-radius: 11px; 
+   padding: 2.2rem;        /* più spazio interno */
+  min-width: 280px;       /* larghezza minima */
+  min-height: 280px;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contact-person-contact {
+
+  background: var(--dark2); 
   border: 0.5px solid var(--border);
   border-radius: 11px; 
    padding: 2.2rem;        /* più spazio interno */
