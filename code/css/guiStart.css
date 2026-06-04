@@ -8,6 +8,7 @@
   --dark:       #3CB4FA;
   --dark2:      #c5e0ff;
   --dark3:      #9bc1fe;
+  --dark4:     #52a1fc
   --text:       #2a8fff;
   --text2:      #295086;
   --text3:      #4a6a99;
@@ -147,8 +148,8 @@ html, body {
 
 .btn-secondary {
 
-  background: transparent;
-  color: var(--accent2);
+  background: var(--dark3);
+  color: var(--accent);
   padding: 11px 24px;
   border-radius: 8px;
   font-size: 14px;
@@ -418,7 +419,7 @@ html, body {
 
 .footer {
 
-  background: var(--dark2); 
+  background: var(--dark); 
   border-top: 0.5px solid var(--border);
   padding: 3rem 4rem;
   display: grid; 
@@ -676,7 +677,7 @@ html, body {
 
 .contact-person {
 
-  background: var(--dark2); 
+  background: var(--dark4); 
   border: 0.5px solid var(--border);
   border-radius: 11px; 
    padding: 2.2rem;        /* più spazio interno */

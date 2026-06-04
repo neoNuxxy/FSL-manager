@@ -21,15 +21,14 @@
       <div class="sidebar">
         <div class="sidebar-user">
           <div class="sidebar-avatar">ST</div>
-          <div class="sidebar-name">Studente</div>
-          <div class="sidebar-badge">Tirocinante</div>
+          <div class="sidebar-badge">Student</div>
         </div>
         <div class="sidebar-section">Menu</div>
         <a class="sidebar-item active" onclick="showPage('dashboard', this)">
           <span class="si">📋</span> Dashboard
         </a>
         <a class="sidebar-item" onclick="showPage('documenti', this)">
-          <span class="si">📄</span> Documenti
+          <span class="si">📄</span> Documents
         </a>
       </div>
 
@@ -39,23 +38,23 @@
         <div id="page-dashboard">
           <div class="dash-topbar">
             <div>
-              <h2>La mia Dashboard</h2>
-              <p>Riepilogo tirocinio</p>
+              <h2>My Dashboard</h2>
+              <p>Internship Summary</p>
             </div>
-            <button class="btn-primary" onclick="presence(); documentLoad()">💾 Salva</button>
+            <button class="btn-primary" onclick="presence(); documentLoad()">💾 Save</button>
           </div>
 
           <div class="student-top-grid">
             <div class="dash-card">
-              <h4>Ore Tirocinio</h4>
+              <h4>Internship hours</h4>
               <div class="hours-inner">
                 <div class="hours-details" style="width: 100%;">
                   <div class="form-group">
-                    <label>Firma presenze</label>
+                    <label>Sign attendance</label>
                     <input id="txtSign" type="text" placeholder="es. 2024-06-01">
                   </div>
                   <div class="form-group" style="margin-top: 10px;">
-                    <label>Ore svolte</label>
+                    <label>Hours worked</label>
                     <input id="txtHourDone" type="number" placeholder="es. 120">
                   </div>
                 </div>
@@ -66,28 +65,28 @@
           </div>
         </div>
 
-        <!-- PAGINA DOCUMENTI -->
+        
         <div id="page-documenti" style="display:none;">
           <div class="dash-topbar">
             <div>
-              <h2>Documenti</h2>
-              <p>I tuoi documenti del tirocinio</p>
+              <h2>Documents</h2>
+              <p>Your internship documents</p>
             </div>
-            <button class="btn-primary" onclick="presence(); documentLoad()">💾 Salva</button>
+            <button class="btn-primary" onclick="presence(); documentLoad()">💾 Save</button>
           </div>
           <div class="dash-card">
-              <h4>Documenti</h4>
+              <h4>Documents</h4>
               <div class="doc-item">
-                <span class="doc-item-name">Convenzione firmata</span>
-                <input id="txtSignedAgreement" type="text" class="doc-input" placeholder="Stato / link">
+                <span class="doc-item-name">Agreement signed</span>
+                <input id="txtSignedAgreement" type="text" class="doc-input" placeholder="State / link">
               </div>
               <div class="doc-item">
-                <span class="doc-item-name">Progetto formativo</span>
-                <input id="txtTrainingProject" type="text" class="doc-input" placeholder="Stato / link">
+                <span class="doc-item-name">Training project</span>
+                <input id="txtTrainingProject" type="text" class="doc-input" placeholder="State / link">
               </div>
               <div class="doc-item">
-                <span class="doc-item-name">Relazione finale</span>
-                <input id="txtFinalReport" type="text" class="doc-input" placeholder="Stato / link">
+                <span class="doc-item-name">Final report</span>
+                <input id="txtFinalReport" type="text" class="doc-input" placeholder="State / link">
               </div>
             </div>
         </div>
